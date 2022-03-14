@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IRNSS: NavIc</title>
+<link href="blogPostStyle.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="mainwrapper">
+  <header> 
+    <!--**************************************************************************
+    Header starts here. It contains Logo and 3 navigation links. 
+    ****************************************************************************-->
+   <!-- <div id="logo"><!-- <img src="logoImage.png" alt="sample logo"> --><!-- Company Logo text My Blogs</div>
+    <nav> <a href="#" title="Link">Home</a> <a href="#" title="Link">About Me</a><a href="#" title="Link">Contact</a> </nav>-->
+  </header>
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+    <section id="mainContent" style="color: #000000;"> 
+      <!--************************************************************************
+    Main Blog content starts here
+    ****************************************************************************-->
+      <h1><!-- Blog title --><b style="color: #000000;">IRNSS: NavIc –Architecture & Accuracy Determination</b></h1>
+      <h3 style="color: #000000;"><!-- Tagline --><b>December 31, 2021</b></h3><br>
+      <!--<div id="bannerImage"><img src="BlogPostAssets/images/SliderLayerImage.png" alt=""/></div>-->
+     <h4>Abstract:</h4>
+		
+ <p id="textcontent" style="color: #000000;"><b>The Indian Regional Navigational Satellite System (IRNSS) is an autonomous regional satellite navigation system being developed by the Indian Space Research Organization (ISRO). The requirement of such a navigation system is driven by the fact that access to Global Navigation Satellite Systems, GPS, is not guaranteed in hostile situations. Here in this poster we study architecture and applications and math model for accuracy determination. The position accuracies has been observed and plotted with respect to the standard time which are independent from global positioning system satellites and are used for navigation, tracking, mapping, surveying and other services for users within the coverage region. The position errors are calculated using x position, y position and z position data. The data taken are from IRNSS -user receiver placed at school of engineering and technology, Bangalore.</b></p>
+<h4>Introduction:</h4>
+<p id="textcontent" style="color: #000000;"><b>Indian Regional Navigation Satellite System (IRNSS): NavIc where NavIc stands for NAVgation with Indian Constellation, is an autonomous regional satellite navigation system that provides accurate real-time positioning and timing services. To provide accurate position information service to users in India as well as the region extending up to 1500 km from its boundary, which is its primary service area. Services: Standard Positioning Service (SPS) & Restricted Service (RS). Fig. 1 shows the layout of IRNSS satellite. Application:</b>
+	<ul>
+	<li>Terrestrial, Aerial and Marine Navigation</li>
+	<li>Disaster Management</li>
+	<li>Vehicle tracking and fleet management</li>
+	<li>Integration with mobile phones</li>
+	<li>Precise Timing</li>
+	<li>Mapping and Geodetic data capture</li>
+	<li>Terrestrial navigation aid for hikers and travellers</li>
+	<li>Visual and voice navigation for drivers</li></ul>
+This poster speaks about the architecture and technology used in IRNSS and the signal and its bandwidth used. It gives a detailed view about the failure of the 8th satellite of IRNSS launched by ISRO. Finally, it concludes by presenting a MATLAB model for accuracy determination.
+ </p>
+      <h4>8th Satellite- A failure:</h4>
+<p id="textcontent" style="color: #000000;"><b>A constellation of 7 satellites IRNSS-1A to IRNSS-1I  ;IRNSS-1H failed due to the non-separation of the heat shield which didn’t allow the satellite inside the heat shield to launch outside. The top level (heat shield) will be fixed with nuts and bolts. An explosion will be used to crack open the nuts to allow the payload to eject out. A heat shield will be used to protect the payload from this burst. Unfortunately, the explosion was not enough for the separation of the heat shield. Hence, the eight satellite was a failure.</b></P>
+<h4>Architecture & Technology:</h4>
+<p id="textcontent" style="color: #000000;"><b>IRNSS satellites provides service with 7 years of lifespan. They use S-band (2-4 GHz) and high performance phased array antenna which is a computer controlled array of antennas which creates a beam of radio waves that can be electronically steered to point in different directions without moving the antennas. It consist of a C-band transponder referring to the portion of the electromagnetic spectrum. IRNSS-1A carries corner-cube retro-reflectors for laser ranging where a retroreflector is a device that reflects radiation back to its source with minimum scattering. Fig. 2 shows the important components of the IRNSS satellite payload.<br>
+	<br> The IRNSS has 3 segments: Space, Ground and User. The space segment consists of a constellation of 7 satellites (IRNSS 1A – IRNSS 1I). 3 (Geostationary Orbit) GEOs located at 34o E, 83o E and 131.5o E and 4 (Geosynchronous Orbit) GSOs at an inclination angle of 29o placed two each at with equator crossing at 55o and 111o E. The ground segment consists of ground stations for generation and transmission of navigation parameters, satellite control, satellite ranging and monitoring. A total of 20 stations along with 2 Master Control Station (MCS) are planned. IRNSS will have two types of signals in L5 (1176.45 MHz) & S (2492.028 MHz) band. Fig. 3 shows the positioning of the 7 constellation satellite.<br>
+	<br>The IRNSS design requirements call for a position accuracy of greater than 20 m throughout India and within the region of coverage extending about 1500 km beyond. The system is expected to provide accurate real-time position, velocity and time observables for users on a variety of platforms with 24 hour x 7 day service availability under all weather conditions.<br>
+	<br>The important functions of the IRNSS payload are: Transmission of the navigational timing information in the L5 bands; transmission of navigation, timing information in S-band; generation of navigation data on-board, CDMA ranging transponder for precise ranging. The navigation payload will have the following subsystems: NSGU (Navigation Signal Generation Unit), Atomic clock unit, comprising of Rubidium atomic clocks, clock management and control unit, frequency generation unit, modulation unit, high power amplifier unit, power combining unit and navigation antenna.IRNSS Ground Segment Elements: </b>
+	<ul>
+		<li>IRSCF (IRNSS Satellite Control Facility)</li>
+		<li>IRTTC (IRNSS TTC and Land Uplink Stations)</li>
+		<li>IRSCC (IRNSS Satellite Control Center)</li>
+		<li>IRIMS (IRNSS Range and Integrity Monitoring Stations)</li>
+		<li>IRNCF (IRNSS Navigation Control Facility)</li>
+		<li>IRDCN (IRNSS Data Communication Network)</li>
+	</ul>
+ </p>
+	<h4>IRNSS Signal & Position Accuracy:</h4>
+<p id="textcontent" style="color: #000000;"><b>The transmission is done using the L-band and S-band helix array antenna to provide global coverage in right-hand circularly polarized (RHCP) signals. Thus, user receivers can operate in single-and/or dual-frequency mode. The hardware group delay is defined as a time difference between the transmitted RF signal (measured at the phase center of a transmitting antenna) and the signal at the output of the on-board frequency source. Three different parameters comprise this group delay: a fixed/bias group delay, a differential group delay and a group delay uncertainty in bias and differential value. Fig. 4 shows the ground stations single processing and communication.
+	<br> Each IRNSS navigation signal has two hardware paths - main and redundant. In case of failure, the signal will be diverted from the main subsystem to the redundant subsystem. The absolute value of the mean differential delay shall not exceed a few nanoseconds, i.e., on the order of 15 to 30 ns.</b>
+ </p>
+	 <h4>Math Model:</h4>
+<p id="textcontent" style="color: #000000;"><b>The recorded data from processing unit is taken out for the analysis using a MATLAB simulator. The minimum and maximum position errors are computed from developed mathematical modelling are plotted by using MATLAB platform. The mathematical function is used in MATLAB to measure the parameters like standard deviation, RMS error, and mean position errors for the X, Y and Z coordinates in MATLAB and this equation is used to calculate the position of X, Y, Z. Fig. 5 shows the coverage of all the seven constellation satellites of NavIc. The IRNSS receiver works in two initial conditions, they are 1. Dual frequency L5 and S Band for IRNSS. 2. Klobuchar model as a default for GPS. The system is running with three different modes of operation namely 1. IRNSS-DF 2. GPS only 3. Selected MODE DF IRNSS+ GPS Hybrid Mode. The Results of an IRNSS receiver are obtained by using three different modes of data set. 
+	<br><br>bias_x = Pos_x-Fixed_x <br>
+bias_y = Pos_y-Fixed_y<br>
+ bias_z = Pos_z-Fixed_z <br>
+%This equation is used to calculate the mean of X, Y, Z. <br>
+mean_x = mean (bias_x) <br>
+mean_y = mean (bias_y) <br>
+mean_z = mean (bias_z) <br>
+%This equation is used to calculate the standard deviation of X, Y, Z. <br>
+std_x = std (bias_x) <br>
+std_y = std (bias_y) <br>
+std_z = std (bias_z) <br>
+%This equation is used to calculate the minimum and maximum errors of X, Y, Z. <br>
+min_x = min (bias_x) <br>
+max_x = max (bias_x) <br>
+min_y = min (bias_y) <br>
+max_y = max (bias_y) <br>
+min_z = min (bias_z) <br>
+max_z = max (bias_z) <br>
+%This equation is used to plot the standard deviation, mean position and RMS errors of X, Y, Z. <br>
+Pos_x1 = Pos_x (n) <br>
+Pos_y1 = Pos_Y (n) <br>
+Pos_z1 = Pos_z (n) <br>
+std_x_pos = std (Pos_x1) <br>
+std_y_pos = std (Pos_y1) <br>
+std_z_pos = std (Pos_z1) <br>
+mean_x_pos = mean (Pos_x1) <br>
+mean_y_pos = mean (Pos_y1) <br>
+mean_z_pos = mean (Pos_z1) <br>
+rms_error = sqrt((sum(bias_x2) + sum(bias_y 2) + sum(bias_z2)) / length(bias_x)) </b>
+</P>
+	<h4>Conclusion:</h4>
+<p id="textcontent" style="color: #000000;"><b>This poster introduces the Indian Regional Navigation Satellite System (IRNSS): NavIc where NavIc stands for NAVgation with Indian Constellation. It briefly explains the architecture used in the IRNSS satellites and also the technology enabled by it to the end users. NavIc is a 7 satellite constellation system. The IRNSS use dual band L5 & S-band to transmit with the end user. IRNSS gives 2 types of services: Standard Positioning Service (SPS) & Restricted Service (RS). A math model is explained to calculate the accuracy of the positioning service of the IRNSS on MATLAB using mean, standard deviation and rms error.</b>
+</P>
+<h4>Reference:</h4>
+<p id="textcontent" style="color: #000000;">
+<ol>
+	<li>Determination and Preliminary Analysis of Position Accuracy on IRNSS Satellites; Raghu N, Manjunatha K N and Kiran B; International Conference on Communication and Signal Processing, April 6-8, 2016, India.</li>
+	<li>IRNSS Architecture and Applications; Byroju Saikiran, Kamala Institute of Technology & Science, Huzurabad (A.P); Vippula Vikram, Asst.prof , Kamala Institute of Technology & Science, Huzurabad (A.P); KIET International Journal of Communications & Electronics Volume. No. 1, Issue No. 3, Sep – Dec 2013, ISSN: 2320 – 8996.</li>
+	<li>Tracking IRNSS Satellites for Multi-GNSS Positioning in Finland; InsideGNSS; November/December 2014.</li>
+	<li>Safoora Zaminpardaz, Peter J.G. Teunissen & Nandakumaran Nadarajah (2016) IRNSS stand-alone positioning: first results in Australia, Journal of Spatial Science, 61:1, 5-27, DOI: 10.1080/14498596.2016.1142398.</li>
+</ol></P>
+      <aside id="authorInfo"> 
+        <!-- The author information is contained here -->
+        <h2 style="color: #000000;">About Author</h2>
+        <p id="textcontent" style="color: #000000;"><b style="color:#ff0000; font-size: 25px;">Kiruthick Raja Dhanasekaran</b> <br>
+		 <b>Undergraduate Student,<br>
+		  from School of Electronics and Communication Engineering (SENSE),<br>
+			 Vellore Institute of Technology, Amaravati.<br></b></p>
+		  <p id="textcontent" style="color: #000000;"><!--1--><td style="padding:0 10px 0 10px;"><a href="https://kiruthick-raja-dhanasekaran.github.io/launching-soon/"><img src="https://lh3.googleusercontent.com/URgNyn3ia1F7C8GgVB6GLiyfPFCK7ljcE_eVrVSsYgoi_Te3VdA-N2fk5VoDQVCtVkN68qj4drAzisYRlPfi19llGI8ft6bJPTq5pP1tQpySLw2fOdcuqLDSxjUOqIPUXI6DDKiZIQ=w2400" style="display: block; height: auto; border: 0;" title="Website" width="29" alt="Website" height=""></a></td>
+			<!--2--> <td style="padding:0 5px 0 5px;"><a href="https://www.linkedin.com/in/kiruthick-raja-dhanasekaran/"><img src="https://lh3.googleusercontent.com/bak4F9_Y8zd4Wy1PhA5k-eAMCcdPt4SfVgNaBgAv6EtgELJs1buQInMrTR5fJoT1j75u36EG-hBZb69gZoiFib4GV8RqFNcd2B1YQ8DX9LQ1mU31KslTxbBwe9Ii5rQZCY15ciOpOA=w2400" style="display: block; height: auto; border: 0;" title="LinkedIn" width="28" alt="LinkedIn" height=""></a></td>
+			<!--3--> <td style="padding:0 5px 0 5px;"><a href="https://www.instagram.com/kiruthick_raja/"><img src="https://lh3.googleusercontent.com/05ozRFYVPQy_mlPTg7BG7MrT7G0gFQSc9K7ulYNJodXtsgC-xoLodGh8q3nFIjycgiAUJnUI_2a9b-mLfYLZGi-oLd-E3bW4OSxFQE8_O0G0eJXaGzKp4iCOIV6DHKhtB-wCRd_U3A=w2400" style="display: block; height: auto; border: 0;" title="Instagram" width="28" alt="Instagram" height=""></a></td></p>
+      </aside>
+    </section>
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+	 <h3>Patron</h3>
+      <div id="adimage"><img src="https://lh3.googleusercontent.com/IuOxri1FOEI_lxEpLfr8klmN2Ww_B4-AnHSr7IBWpi-pFEj2BWFBcHyzN4ciFQJ9_6a4BzxTKHCwJLbU36EEX8yJk2vl6pNNgZUUpCqWr6a1OcWj56te0-i69Cca5y2lB_34EE-f5g=w2400" alt=""/></div><br><br>
+     <!-- <nav>
+        <ul>
+          <li><a href="#" title="Link">Link1</a></li>
+          <li><a href="#" title="Link">Link2</a></li>
+          <li><a href="#" title="Link">Link3</a></li>
+          <li><a href="#" title="Link">Link4</a></li>
+          <li><a href="#" title="Link">Link5</a></li>
+          <li><a href="#" title="Link">Link6</a></li>
+        </ul>
+      </nav>-->
+    </section>
+    <footer> 
+      <!--************************************************************************
+    Footer starts here
+    **************************************************************************
+      <article>
+        <h3>Footer1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </article>
+      <article>
+        <h3>Footer2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </article>
+    </footer>
+  </div>
+  <div id="footerbar"><!-- Small footerbar at the bottom --></div>
+</div>
+</body>
+</html>
